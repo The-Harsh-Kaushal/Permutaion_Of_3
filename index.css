@@ -183,3 +183,22 @@ body {
            margin-left: 20px;
         }
     }
+
+    @media only screen and (max-width: 920px) {
+        body{
+            height: 150vh;
+            justify-content: space-between;
+        }
+        .container{
+            flex-direction: column;
+            .dialpad{
+                margin-left: 0px;
+                width: 100%;
+                margin-top: 50px;
+            }
+            .calculations{
+                width: 100%;
+                margin-top: 50px;
+            }
+        }
+    }
