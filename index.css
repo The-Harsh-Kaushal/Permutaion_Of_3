@@ -66,18 +66,27 @@ body {
         font-size: 4rem;
         height: 110px;
         box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-        transition: transform 0.3s ease-in-out;
+        
     }
     span:hover{
+        animation: HovAni 0.5s ease;
+    }
+    
+}
+}
+@keyframes HovAni {
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
         transform: scale(0.95);
     }
-    
-    span:nth-child(11) {
-        grid-area:  4 / 2 / 4 /  4 ;
-    }
-    
 }
+.click_animationn{
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
 }
+
 
 
 
@@ -99,13 +108,18 @@ body {
        border-radius: 20px;
        padding: 8px;
      
-        span{
+        .C_sp{
+            display: flex;
             background-color: var(--third-color);
             height: 80px;
             width: 100%;
             border-radius: 12px;
             box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-            
+            font-size: 3.5rem;
+            align-items: center;
+            color: white;
+            letter-spacing: 20px;
+            padding-left: 40px;
         }
         .result{
             flex: 1;
@@ -113,6 +127,7 @@ body {
             margin-top: 8px;
             display: flex;
             .repeated{
+                overflow: hidden;
                 background-color: var(--third-color);
                 flex: 0.5;
                 border-radius: 12px;
@@ -122,9 +137,11 @@ body {
                     color: var(--text-color);
                     text-align: center;
                     font-size: 2rem;
+                   
                 }
             }
             .non-repeated{
+                overflow: hidden;
                 background-color: var(--third-color);
                 box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
                 
@@ -137,6 +154,32 @@ body {
                 text-align: center;
                 font-size: 2rem;
                }
+
+
            }
         }
     }}
+
+
+    /* font */
+
+    .font_med{
+        font-size: 2rem;
+        display: flex;
+        color: white;
+        font-family: "Cinzel", serif;
+        letter-spacing: 5px;
+        margin: 10px;
+    }
+
+    .display{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        span{
+            font-family: "Kalam", cursive;
+           color: white;
+           font-size: 2rem;
+           margin-left: 20px;
+        }
+    }
